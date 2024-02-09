@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multistep-form</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <script src="App.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+</head>
+<body>
+
+    <div class="pages">
+        <div id="pages-nav" class="pages-step active" data-title="Info"></div>
+        <div id="pages-nav" class="pages-step" data-title="Plans"></div>
+        <div id="pages-nav" class="pages-step" data-title="Addons"></div>
+        <div id="pages-nav" class="pages-step" data-title="Confirm"></div>
+    </div>
+
+
+    <div class="form-flex">
+    
+        <!-- form 1 personal info -->
+        <div class="form-step activate">
+    
+            <h1 class="head-info">Personal Info</h1>
+            <p class="para-info">Please provide your name,email address and phone number</p>
+    
+            <div class="input-group">
+                <label for="firstname" class="fname">Name</label>
+                <div class="input-effect">
+                   
+                        <input type="text" id="firstname" name="firstname" onkeyup="stoppedTyping()">
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                   
+                </div>
+                <!-- <div class="error"></div> -->
+            </div>
+
+            <div class="input-group">
+                <label for="emailaddr" class="mail">Email Address</label>
+                <div class="input-effect">
+                    <input type="email" id="emailaddr" name="emailaddr" onkeyup="stoppedTyping()">
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <!-- <div class="error"></div> -->
+            </div>
+
+            <div class="input-group">
+                <label for="phoneno" class="phone">Phone number</label>
+                <div class="input-effect">
+                    <input type="text" id="phoneno" name="phoneno" onkeyup="stoppedTyping()">
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <!-- <div class="error"></div> -->
+            </div>
+            
+        </div>
+        <!-- form 1 end -->
+        
+        <!-- form 2 plan-options-->
+        
+        <div class="form-step">
+    
+            <h1 class="head-info">Select your plan</h1>
+            <p class="para-info">You have the option of monthly or yearly billing.</p>
+    
+            <div class="plan-opts">
+                <div class="plan-opt">
+                    <img src="./images/icon-arcade.svg" alt="arcade-icon" />
+                    <div class="opt-details">
+                        <h1 class="opt-title">Arcade</h1>
+                        <p>$9/mo</p>
+                    </div>
+                </div>
+            </div>
+            <!-- plan-opts 1 end  -->
+    
+            <div class="plan-opts">
+                <div class="plan-opt">
+                    <img src="./images/icon-advanced.svg" alt="arcade-icon" />
+                    <div class="opt-details">
+                        <h1 class="opt-title">Advanced</h1>
+                        <p>$12/mo</p>
+                    </div>
+                </div>
+            </div>
+            <!-- plan-opts 2 end  -->
+    
+    
+            <div class="plan-opts">
+                <div class="plan-opt">
+                    <img src="./images/icon-pro.svg" alt="arcade-icon" />
+                    <div class="opt-details">
+                        <h1 class="opt-title">Pro</h1>
+                        <p>$15/mo</p>
+                    </div>
+                </div>
+            </div>
+            <!-- plan-opts 3 end  -->
+    
+            <div class="plan-subs">
+                <div monthly-active class="monthly active" id="monthly">Monthly</div>
+                <div class="toggle">
+                    <div class="sub-toggle">
+                      <label for="" class="radio-label">
+                        <input type="radio" name="radio" id="radio1" class="btn-radio"  checked>
+                        <input type="radio" name="radio" id="radio2" class="btn-radio">
+                        <label class="ball"></label>
+                      </label>
+                    </div>
+    
+                </div>
+                <div yearly-active class="yearly">Yearly</div>
+            </div>
+    
+        </div>
+        <!-- form 2 plan options end -->
+    
+        <!-- form 3 plan addons -->
+    
+        <div class="form-step">
+    
+            <h1 class="head-info">Pick add-ons</h1>
+            <p class="para-info">Add-ons help enhance your gaming experience.</p>
+    
+            <div class="plan-addons">
+                <div class="plan-addon">
+                    <span class="addon-checkbox">
+                        <input type="checkbox" class="addon-check" id="addon-check">
+                        <span class="input-check"></span>
+                      </span>
+                    <div class="addon-details">
+                        <h1 class="addon-title">Online Service</h1>
+                        <p>Access to multiplayer games</p>
+                    </div>
+                    <div class="addon-price">
+                        <p>+$1/mo</p>
+                    </div>
+    
+                </div>
+            </div>
+            <!-- plan-addons 1 end  -->
+    
+            <div class="plan-addons">
+                <div class="plan-addon">
+                    <span class="addon-checkbox">
+                        <input type="checkbox" class="addon-check" id="addon-check">
+                        <span class="input-check"></span>
+                      </span>
+                    <div class="addon-details">
+                        <h1 class="addon-title">Larger storage </h1>
+                        <p>Extra 1TB of cloud save</p>
+                    </div>
+                    <div class="addon-price">
+                        <p>+$1/mo</p>
+                    </div>
+    
+                </div>
+            </div>
+            <!-- plan-addons 2 end  -->
+    
+    
+            <div class="plan-addons">
+                <div class="plan-addon">
+                    <span class="addon-checkbox">
+                        <input type="checkbox" class="addon-check" id="addon-check">
+                        <span class="input-check"></span>
+                      </span>
+                    <div class="addon-details">
+                        <h1 class="addon-title">Customizable Profile</h1>
+                        <p>Custom theme on your profile</p>
+                    </div>
+                    <div class="addon-price">
+                        <p>+$1/mo</p>
+                    </div>
+    
+                </div>
+            </div>
+            <!-- plan-addons 3 end  -->
+    
+    
+    
+        </div>
+        <!-- form 3 plan addons end -->
+    
+    
+        <!-- form 4 finishing up -->
+        <div class="form-step">
+    
+            <h1 class="head-info">Finishing up</h1>
+            <p class="para-info">Double-check everything looks OK before confirming.</p>
+    
+            <div class="plan-finishup">
+    
+                <div class="plan-confirm">
+    
+                    <!-- plan-change--flex -->
+                    <div class="plan-change--flex">
+                        <div class="plan-change">
+                            <p class="plan-change--title">Arcade(Monthly)</p>
+                            <a href="#" class="change-link" id="change-link">Change</a>
+                        </div>
+                        <div class="plan-change">
+                            <p class="change-price">$9/mo</p>
+                        </div>
+                    </div>
+                    <!-- plan-change--flex  -->
+    
+                    <hr />
+    
+                    <div class="confirm-addons--flex">
+                        <p class="confirm-addons">Online Service</p>
+                        <p class="confirm-addons--price">+$1/mo</p>
+                    </div>
+    
+                    <div class="confirm-addons--flex">
+                        <p class="confirm-addons">Larger Storage</p>
+                        <p class="confirm-addons--price">+$2/mo</p>
+                    </div>
+    
+                </div>
+    
+                <!-- end of plan confirm  -->
+    
+                <div class="total-confirm">
+                    <p class="total-title">Total (per month)</p>
+                    <p class="total-price">+$12/mo</p>
+                </div>
+    
+    
+            </div>
+    
+    
+    
+    
+        </div>
+        <!-- form 4 finishing up end -->
+
+        <!-- last page -->
+        <div class="form-step confirmed-page">
+            
+            <img src="./images/icon-thank-you.svg" alt="thankyou-logo" class="thank-you">
+            <h1 class="head-info">Thank You!</h1>
+            <p class="para-info">Thanks for confirming your subscription! We hope you have fun using our platform.If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+    
+            
+        </div>
+        <!-- form 1 end -->
+    
+
+
+    </div>
+    
+        <div class="footer">
+            <div class="btn-section">
+                <button  class="btn btn-prev">Go back</button>
+                <button  class="btn btn-next active" disabled >Next</button>
+                <button  class="btn btn-confirm">Confirm</button>
+            </div>
+    
+        </div>
+    
+
+    
+
+</body>
+</html>
