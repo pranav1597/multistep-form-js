@@ -150,7 +150,7 @@ input:focus ~ .focus-border i:after{height: 100%; transition: 0.4s;}
 /* when input erors */
 input ~ .focus-border.active:before,
 input ~ .focus-border.active:after{content: ""; position: absolute; top: 0; left: 0; width: 0; height: 2px; background-color: #df1414; transition: 0.3s;}
-input ~ .focus-border:after{top: auto; bottom: 0; left: auto; right: 0;}
+input ~ .focus-border.active:after{top: auto; bottom: 0; left: auto; right: 0;}
 input ~ .focus-border.active i:before,
 input ~ .focus-border.active i:after{content: ""; position: absolute; top: 0; left: 0; width: 2px; height: 0; background-color: #df1414; transition: 0.4s;}
 input ~ .focus-border.active i:after{left: auto; right: 0; top: auto; bottom: 0;}
@@ -160,15 +160,6 @@ input:focus ~ .focus-border.active i:before,
 input:focus ~ .focus-border.active i:after{height: 100%; transition: 0.4s;}
 
 
-
-
-
-
-
-
-
-
-
 .input-effect.success input{
   border-color: #4ac29a;
 }
@@ -176,7 +167,6 @@ input:focus ~ .focus-border.active i:after{height: 100%; transition: 0.4s;}
 .input-effect.error input{
   border-color: rgb(199, 23, 23);
 }
-
 
 .error{
   color:rgb(199, 23, 23) ;
@@ -348,6 +338,10 @@ button[disabled]{
     font-size: 12px;
     font-weight: 500;
   }
+
+  /* .monthly.active{
+    font-size: 14px;
+  } */
   
   .activated{
     margin: 0 15px;
