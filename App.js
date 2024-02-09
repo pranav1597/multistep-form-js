@@ -161,7 +161,7 @@ function updateFormSteps(){
                         // monthly.classList[0].add("active");
                         // yearly.classList.remove("active")
                         
-                        monthly.classList.replace("monthly", "active")
+                        monthly.classList.replace("monthly", "activated")
                         yearly.classList.replace("activated", "yearly")
                         console.log(monthly)
                     }
@@ -171,7 +171,7 @@ function updateFormSteps(){
                 radio2.addEventListener("change", function () {
                     if(radio2.checked){
                         
-                        yearly.classList.replace("yearly", "active")
+                        yearly.classList.replace("yearly", "activated")
                         monthly.classList.replace("activated", "monthly")
                         console.log(yearly)
                         // console.log(yearly[0].classList[0].add("active"))
