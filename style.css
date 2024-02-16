@@ -17,26 +17,29 @@ body{
     border: 1px solid red;
    
     background: #4ac29a;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Ubuntu", sans-serif;
      
     /* display: block; */
     position: relative;
     /* overflow: scroll; */
     min-height: 100vh;
-}
-
-
-/* pages */
-
-.pages{
-  position: relative;
-  /* outline: 1px solid; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  padding: 20px 70px;
-  margin: 20px 0;
-  counter-reset: step;
+    background-image: url(./images/bg-sidebar-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  
+  
+  /* pages */
+  
+  .pages{
+    position: relative;
+    /* outline: 1px solid; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 70px;
+    margin: 0px 0;
+    counter-reset: step;
 }
 
 .pages-step{
@@ -84,13 +87,14 @@ body{
   display: none;
    /* position: relative; */
     /* border: 1px solid black; */
-    width: 325px;
-    padding: 10px 10px;
+    width: 90%;
+    padding: 20px;
     box-shadow: 0px 0px 10px 2px rgb(202, 201, 201);
     background-color: white;
     border-radius: 10px;
     transform-origin: top;
     animation: animate .5s;
+    margin: 10px auto;
     /* margin: auto; */
     /* flex: 1; */
     /* margin: 20px 0; */
@@ -103,14 +107,16 @@ body{
 .head-info{
     /* text-align: center; */
     margin-bottom: 5px;
-    font-size: 22px;
-    margin-left: 12px;
+    font-size: 20px;
+    color: hsl(213, 96%, 18%);
+    /* margin-left: 12px; */
   }
   
   .para-info{
     font-size: 14px;
-    margin-left: 12px;
+    /* margin-left: 12px; */
     margin-bottom: 15px;
+    color: hsl(231, 11%, 63%);
 }
 
 label{
@@ -200,11 +206,11 @@ button[disabled]{
     /* outline: 1px solid black; */
     display: block;
     text-align: center;
-    padding: 15px;
-    background-color: #283c86;
+    padding: 10px;
+    background-color: hsl(213, 96%, 18%);
     color: white;
-    font-weight: bold;
-    width: 100px;
+    /* font-weight: bold; */
+    width: 85px;
     border-radius: 5px;
     /* margin-left: auto; */
     position: relative;
@@ -309,34 +315,44 @@ button[disabled]{
     /* outline: 1px solid ; */
     outline: 1px solid #ccc;
   }
+
+  .plan-opt > img{
+    width: 35px;
+    height: 35px;
+  }
   
   .opt-details{
     margin-left: 15px;
   }
   
   .opt-details > h1{
-    font-size: 18px;
+    font-size: 14px;
+    color: hsl(213, 96%, 18%);
   }
   
   .opt-details > p {
-    font-size: 14px;
-    color: gray;
+    font-size: 12px;
+    color: hsl(231, 11%, 63%);
+    font-weight: 500;
   }
   
   .plan-subs{
     /* margin: auto; */
     text-align: center;
-    outline: 1px solid ;
+    /* outline: 1px solid ; */
     padding: 10px 10px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 5px;
+    background-color: hsl(217, 100%, 97%);
   }
   
   .monthly,.yearly{
     margin: 0 15px;
     font-size: 12px;
     font-weight: 500;
+    color: hsl(231, 11%, 63%);
   }
 
   /* .monthly.active{
@@ -346,8 +362,8 @@ button[disabled]{
   .activated{
     margin: 0 15px;
     font-size: 14px;
-    color: #283c86;
-    font-weight: 500;
+    color: hsl(213, 96%, 18%);
+    font-weight: 600;
     /* animation: example ease-in-out 1.5s forwards; */
   }
   /* .yearly.active{
@@ -356,7 +372,7 @@ button[disabled]{
   } */
   
   .toggle {
-    background: #283c86;
+    background: hsl(213, 96%, 18%);
     display: inline-block;
     width: 40px;
     border-radius: 20px;
@@ -406,7 +422,7 @@ button[disabled]{
   
   
   .plan-addons{
-    margin: 13px;
+    /* margin: 13px; */
   }
   
   .plan-addon{
@@ -414,7 +430,7 @@ button[disabled]{
     justify-content: space-between;
     align-items: center;
     padding: 10px 10px;
-    
+    margin: 13px auto;
     /* flex-shrink: 0; */
     border-radius: 7px;
     /* outline: 1px solid ; */
@@ -428,15 +444,16 @@ button[disabled]{
     justify-content: center;
     align-items: center; */
     /* position: relative; */
-    padding: 5px;
+    
   }
   
   .addon-check{
     /* outline: 1px solid green; */
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     margin-top: 5px;
     background: hsl(243, 100%, 62%);
+
   }
   
   .input-check{
@@ -445,34 +462,35 @@ button[disabled]{
   }
   
   .addon-details{
-    margin-left: 15px;
+    margin-left: 8px;
     /* outline: 1px solid; */
     flex-grow: 1;
     /* flex-shrink: 0; */
   }
   
   .addon-details > h1{
-    font-size: 14px;
+    font-size: 12px;
     /* flex: 2; */
-    
+    color: hsl(213, 96%, 18%);
   }
   
   .addon-details > p {
     font-size: 10px;
-    color: gray;
+    color: hsl(231, 11%, 63%);
     font-weight: 500;
     /* flex: 1; */
     /* text-align: end; */
   }
   
   .addon-price {
-    font-size: 12px;
-    color: gray;
+    font-size: 10px;
+    color: hsl(213, 96%, 18%);
     text-align: end;
+    font-weight: 600;
   }
   
   .check{
-    background-color: hsl(206, 94%, 87%);
+    background-color: hsl(217, 100%, 97%);
     outline-color: hsl(213, 96%, 18%);
   }
   
@@ -578,7 +596,7 @@ button[disabled]{
   background-color: beige;
   /* flex-shrink: 0; */
   width: 100%;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   
   }
