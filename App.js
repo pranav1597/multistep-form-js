@@ -285,3 +285,55 @@ function updateFormSteps(){
             }
             
             
+
+let optOne = document.getElementById('opt1')
+let optTwo = document.getElementById('opt2')
+let optThree = document.getElementById('opt3')
+let planOpts = document.querySelectorAll('.plan-opts')
+let optionsOne = document.querySelectorAll('.opts-one')
+let optionsTwo = document.querySelectorAll('.opts-two')
+let optionsThree = document.querySelectorAll('.opts-three')
+let planOpt1 = document.querySelectorAll('.plan-opt--one')
+let planOpt2 = document.querySelectorAll('.plan-opt--two')
+let planOpt3 = document.querySelectorAll('.plan-opt--three')
+
+optOne.addEventListener('change', function() {
+    if(optOne.checked){
+        optionsOne[0].classList.add('selected')
+        optionsTwo[0].classList.remove('selected')
+        optionsThree[0].classList.remove('selected')
+        planOpt1[0].classList.add('selected')
+        planOpt2[0].classList.remove('selected')
+        planOpt3[0].classList.remove('selected')
+        console.log(optionsOne[0])
+        console.log(planOpt1[0].classList)
+    }
+})
+
+optTwo.addEventListener('change', function() {
+    if(optTwo.checked){
+        optionsOne[0].classList.remove('selected')
+        optionsTwo[0].classList.add('selected')
+        optionsThree[0].classList.remove('selected')
+        planOpt1[0].classList.remove('selected')
+        planOpt2[0].classList.add('selected')
+        planOpt3[0].classList.remove('selected')
+        
+        console.log(optionsTwo[0])
+    }
+})
+
+optThree.addEventListener('change', function() {
+    if(optThree.checked){
+        optionsOne[0].classList.remove('selected')
+        optionsTwo[0].classList.remove('selected')
+        optionsThree[0].classList.add('selected')
+        planOpt1[0].classList.remove('selected')
+        planOpt2[0].classList.remove('selected')
+        planOpt3[0].classList.add('selected')
+        console.log(optionsThree[0])
+        
+    }
+})
+
+

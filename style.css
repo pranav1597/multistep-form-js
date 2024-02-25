@@ -609,7 +609,7 @@ button[disabled]{
     display: none;
   }
 
-  #plan-check{
+  .plan-check{
     /* display: inline-block;
      */
     /* pointer-events: none; */
@@ -618,18 +618,25 @@ button[disabled]{
     left: 0;
     top: 0;
     bottom: 0;
+
     /* display: none; */
     opacity: 0;
+    
   }
   
-  #plan-check[type="radio"]:checked{
+  
+  .opts-one.selected,.opts-two.selected,.opts-three.selected{
+    position: relative;
+    background-color: hsl(217, 100%, 97%);
+    /* border:1px solid hsl(213, 96%, 18%); */
     
-    outline:1px solid hsl(213, 96%, 18%);
-    background-color: black;
-    /* opacity: 1; */
-  }
+ }
 
+ .plan-opt--one.selected, .plan-opt--two.selected, .plan-opt--three.selected{
+  outline: 1px solid hsl(213, 96%, 18%);
+ }
  
+
 
   @keyframes bubbles {
     0% {
